@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "WorkFlowy Custom Shortcut",
+    "version": "1.0",
+    "description": "WorkFlowyに独自のショートカットキーを追加します。",
+    "content_scripts": [
+        {
+            "matches": ["*://workflowy.com/*", "*://*.workflowy.com/*"],
+            "js": ["content.js"] 
+        }
+    ],
+    "web_accessible_resources": [
+        "workflowy-hook.js" 
+    ]
+}
