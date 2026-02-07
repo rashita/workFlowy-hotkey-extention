@@ -1,8 +1,16 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "WorkFlowy Custom Shortcut",
-    "version": "1.0",
+    "version": "1.0.4",
     "description": "WorkFlowyに独自のショートカットキーを追加します。",
+    "browser_specific_settings": {
+    "gecko": {
+      "id": "tadanorik6@gmail.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
     "content_scripts": [
         {
             "matches": ["*://workflowy.com/*", "*://*.workflowy.com/*"],
@@ -10,6 +18,9 @@
         }
     ],
     "web_accessible_resources": [
-        "workflowy-hook.js" 
-    ]
+    {
+      "resources": ["workflowy-hook.js"],
+      "matches": ["*://workflowy.com/*", "*://*.workflowy.com/*"]
+    }
+  ]
 }
